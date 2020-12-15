@@ -42,7 +42,8 @@ await alive.client.send_file(
             link_preview=False,
             allow_cache=True,
         )
-   else:
+        await alive.delete()
+    else:
         await edit_or_reply(
             alive,
             f"<b>{CUSTOM_ALIVE_TEXT}</b>\n\n"
