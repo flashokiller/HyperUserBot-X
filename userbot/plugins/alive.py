@@ -20,17 +20,16 @@ async def amireallyalive(alive):
     uptime = await catdef.get_readable_time((time.time() - StartTime))
     _, check_sgnirts = check_data_base_heal_th()
     if CAT_IMG:
-cat_caption = "➥ **HyperUserBot-X IS:** `ONLINE`\n\n"
-cat_caption += "➥ **SYSTEMS STATS**\n"
-cat_caption += "➥ **Telethon Version:** `{version.__version__}` \n"
-cat_caption += "➥ **Python:** `{python_version()}` \n"
-cat_caption += f"➥ **Uptime** : `{uptime}` \n"
-cat_caption += "➥ **Database Status:**  `Functional`\n"
-cat_caption += "➥ **Current Branch** : `master`\n"
-cat_caption += f"➥ **Version** : `{catversion}`\n"
-cat_caption += f"➥ **My Boss** : {hmention} \n"
-cat_caption += "➥ **Heroku Database** : `AWS - Working Properly`\n\n"
-cat_caption += "➥ **Copyright** : By [NotShroudX97@Github](GitHub.com/NotShroudX97)\n"
+cat_caption += " **SYSTEMS STATS**\n"
+cat_caption += " **Telethon Version:** `{version.__version__}` \n"
+cat_caption += " **Python:** `{python_version()}` \n"
+cat_caption += f" **Uptime** : `{uptime}` \n"
+cat_caption += " **Database Status:**  `Functional`\n"
+cat_caption += " **Current Branch** : `master`\n"
+cat_caption += f" **Version** : `{catversion}`\n"
+cat_caption += f" **My Boss** : {hmention} \n"
+cat_caption += " **Heroku Database** : `AWS - Working Properly`\n\n"
+cat_caption += " **Copyright** : By [NotShroudX97@Github](GitHub.com/NotShroudX97)\n"
 cat_caption += "[REPO](https://github.com/NotShroudX97/HyperUserBot-X)"
         await alive.client.send_file(
             alive.chat_id,
