@@ -42,7 +42,7 @@ await alive.client.send_file(
             link_preview=False,
             allow_cache=True,
         )
-        await alive.delete()
+
     else:
         await edit_or_reply(
             alive,
