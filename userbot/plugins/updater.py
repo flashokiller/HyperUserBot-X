@@ -121,7 +121,9 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             await asyncio.sleep(5)
             return await event.delete()
-        await event.edit("`Successfully Deployed HyperUserBot-X!\n" "Restarting, Please Wait...`")
+        await event.edit(
+            "`Successfully Deployed HyperUserBot-X!\n" "Restarting, Please Wait...`"
+        )
     else:
         await event.edit(
             "`[HEROKU]`\n" "`Please set up`  **HEROKU_API_KEY**  ` Var...`"
@@ -227,7 +229,9 @@ async def upstream(event):
 @bot.on(admin_cmd(outgoing=True, pattern=r"goodhyp$"))
 @bot.on(sudo_cmd(pattern="goodhyp$", allow_sudo=True))
 async def upstream(event):
-    event = await edit_or_reply(event, "`Pulling the HyperUserBot-X Good Repo Wait A Seconds ....`")
+    event = await edit_or_reply(
+        event, "`Pulling the HyperUserBot-X Good Repo Wait A Seconds ....`"
+    )
     off_repo = "https://github.com/ahirearyan2/HyperUserBot-X.git"
     catcmd = f"rm -rf .git"
     try:
