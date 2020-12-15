@@ -226,8 +226,6 @@ async def upstream(event):
     return
 
 
-
-
 @bot.on(admin_cmd(outgoing=True, pattern=r"goodhyp$"))
 @bot.on(sudo_cmd(pattern="goodhyp$", allow_sudo=True))
 async def upstream(event):
