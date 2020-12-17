@@ -1,19 +1,19 @@
 
-# CAT USERBOT
+#HyperTeam & HyperUserBot-X! 🔰
 
 ### The Easy Way to deploy the bot
 Get APP ID and API HASH from [HERE](https://my.telegram.org) and BOT TOKEN from [Bot Father](https://t.me/botfather) and then Generate stringsession by clicking on run.on.repl.it button below and then click on deploy to heroku . Before clicking on deploy to heroku just click on fork and star just below
 
 [![Get string session](https://repl.it/badge/github/sandy1709/sandeep1709)](https://generatestringsession.sandeep1709.repl.run/)
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Jisan09/catuserbot)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/NotShroudX97/HyperUserBot-X)
 <p align="center">
   <a href="https://github.com/Jisan09/catuserbot/fork">
     <img src="https://img.shields.io/github/forks/Jisan09/catuserbot?label=Fork&style=social">
     
   </a>
-  <a href="https://github.com/Jisan09/catuserbot">
-    <img src="https://img.shields.io/github/stars/Jisan09/catuserbot?style=social">
+  <a href="https://github.com/NotShroudX97/HyperUserBot-X">
+    <img src="https://img.shields.io/github/stars/NotShroudX97/HyperUserBot-X?style=social">
   </a>
 </p>
 
