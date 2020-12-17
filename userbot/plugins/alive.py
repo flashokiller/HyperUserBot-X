@@ -54,8 +54,7 @@ async def amireallyalive(alive):
             f"<b>{EMOJI} Telethon version :</b> <code>{version.__version__}</code>\n"
             f"<b>{EMOJI} HyperUserBot-X Version :</b> <code>{catversion}</code>\n"
             f"<b>{EMOJI} Database :</b> <code>{check_sgnirts}</code>\n\n"
-            "    <a href = https://github.com/ahirearyan2/HyperUserBot-X><b>HyperUserBot-X1</b></a> | <a href = https://github.com/NotShroudX97/HyperUserBot-X><b>HyperUserBot-X2</b></a> | <a href = https://t.me/@
-HyperUserBotXSupport><b>Support</b></a>",
+            "    <a href = https://github.com/ahirearyan2/HyperUserBot-X><b>HyperUserBot-X1</b></a> | <a href = https://github.com/NotShroudX97/HyperUserBot-X><b>HyperUserBot-X2</b></a> | <a href = https://t.me/HyperUserBotXSupport><b>Support</b></a>",
             parse_mode="html",
         )
 
