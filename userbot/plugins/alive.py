@@ -19,7 +19,7 @@ async def amireallyalive(alive):
     reply_to_id = await reply_id(alive)
     uptime = await catdef.get_readable_time((time.time() - StartTime))
     _, check_sgnirts = check_data_base_heal_th()
-    if CAT_IMG:https://telegra.ph/file/8efdc9471665e49c924c9.png
+    if CAT_IMG:
         cat_caption = f"<b>{CUSTOM_ALIVE_TEXT}</b>\n\n"
         cat_caption += f"<b>{EMOJI} Master : {hmention}</b>\n"
         cat_caption += f"<b>{EMOJI} Uptime :</b> <code>{uptime}</code>\n"
