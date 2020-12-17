@@ -151,7 +151,9 @@ async def update(event, repo, ups_rem, ac_br):
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     conf = event.pattern_match.group(1).strip()
-    event = await edit_or_reply(event, "`Checking **HyperUserBot-X** For Updates, Please Wait....`")
+    event = await edit_or_reply(
+        event, "`Checking **HyperUserBot-X** For Updates, Please Wait....`"
+    )
     off_repo = UPSTREAM_REPO_URL
     force_update = False
     # if HEROKU_API_KEY or HEROKU_APP_NAME is None:
