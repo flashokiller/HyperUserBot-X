@@ -152,7 +152,7 @@ async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     conf = event.pattern_match.group(1).strip()
     event = await edit_or_reply(
-        event, "`Checking **HyperUserBot-X** For Updates, Please Wait....`"
+        event, "`Checking HyperUserBot-X For Updates, Please Wait....`"
     )
     off_repo = UPSTREAM_REPO_URL
     force_update = False
@@ -207,7 +207,7 @@ async def upstream(event):
         return
     if changelog == "" and not force_update:
         await event.edit(
-            "\n`**HyperUserBot-X Bad** Is`  **Up-To-Date**  `With`  "
+            "\n`HyperUserBot-X Bad Is`  **Up-To-Date**  `With`  "
             f"**{UPSTREAM_REPO_BRANCH}**\n"
         )
         return repo.__del__()
