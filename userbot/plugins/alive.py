@@ -47,6 +47,7 @@ async def amireallyalive(alive):
     else:
         await edit_or_reply(
             alive,
+            f"<b>{ALIVE_PIC} https://telegra.ph/file/8efdc9471665e49c924c9.png</code>\n"
             f"<b>{CUSTOM_ALIVE_TEXT} HyperUserBot-X Is - Running Successfully!</b>\n\n"
             f"<b>{EMOJI} Master : {hmention}</b>\n"
             f"<b>{EMOJI} Uptime :</b> <code>{uptime}</code>\n"
