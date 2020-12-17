@@ -18,10 +18,11 @@ Get APP ID and API HASH from [HERE](https://my.telegram.org) and BOT TOKEN from 
 </p>
 
 
-[![catuserbot logo](https://telegra.ph/file/7e1e89621fabbf02596f8.jpg)](https://heroku.com/deploy)
+[![HyperUserBot-X Logo](https://telegra.ph/file/8efdc9471665e49c924c9.png)](https://heroku.com/deploy)
 
 
-### Join [here](https://t.me/catuserbot17) for updates and tuts and [here](https://t.me/catuserbot_support) for discussion and bugs
+### Join [Here](https://t.me/HyperUserBotXSupport) For Updates And Tutorial And [Here](https://t.me/HyperUserBotXSupport) For 
+Discussions Bugs
 
 ### The Normal Way
 
