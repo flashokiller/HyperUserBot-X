@@ -47,7 +47,7 @@ async def amireallyalive(alive):
     else:
         await edit_or_reply(
             alive,
-            f"<b>{CUSTOM_ALIVE_TEXT} **HyperUserBot-X Is Running Successfully!**</b>\n\n"
+            f"<b>{CUSTOM_ALIVE_TEXT} HyperUserBot-X Is - Running Successfully!</b>\n\n"
             f"<b>{EMOJI} Master : {hmention}</b>\n"
             f"<b>{EMOJI} Uptime :</b> <code>{uptime}</code>\n"
             f"<b>{EMOJI} Python Version :</b> <code>{python_version()}</code>\n"
