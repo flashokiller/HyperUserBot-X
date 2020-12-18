@@ -215,7 +215,7 @@ async def upstream(event):
         await print_changelogs(event, ac_br, changelog)
         await event.delete()
         return await event.respond(
-            'Do "[`.update now`] Or [`.update deploy`]" To update.Check `.info Updater` For Details'
+            'Do "[`.update now`] Or [`.update deploy`]" To Update Check `.info Updater` For Details'
         )
 
     if force_update:
