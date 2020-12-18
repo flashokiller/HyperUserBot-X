@@ -6,7 +6,7 @@ from telethon import version
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 from . import CMD_HELP, StartTime, catdef, catversion, hmention, mention, reply_id
 
-CAT_IMG = Config.ALIVE_PIC "https://telegra.ph/file/8efdc9471665e49c924c9.png"
+CAT_IMG = Config.ALIVE_PIC " https://telegra.ph/file/8efdc9471665e49c924c9.png "
 CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "➥ HyperUserBot-X Bot Is Running Successfully!"
 EMOJI = Config.CUSTOM_ALIVE_EMOJI or "➥"
 
@@ -33,7 +33,7 @@ async def amireallyalive(alive):
             f"<b>{EMOJI} HyperUserBot-X Version :</b> <code>{catversion}</code>\n"
         )
         cat_caption += f"<b>{EMOJI} Database :</b> <code>{check_sgnirts}</code>\n\n"
-        cat_caption += "    <a href = https://github.com/sandy1709/catuserbot><b>GoodCat</b></a> | <a href = https://github.com/Jisan09/catuserbot><b>BadCat</b></a> | <a href = https://t.me/catuserbot_support><b>Support</b></a>"
+        cat_caption += "    <a href = https://github.com/ahirearyan2/HyperUserBot-X><b>GoodHyper</b></a> | <a href = https://github.com/NotShroudX97/HyperUserBot-X><b>BadHyper</b></a> | <a href = https://t.me/HyperUserBotXSupport><b>Support</b></a>"
         await alive.client.send_file(
             alive.chat_id,
             CAT_IMG,
