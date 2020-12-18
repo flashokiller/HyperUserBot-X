@@ -52,7 +52,7 @@ async def set_not_afk(event):
     if "afk" not in current_message and "on" in USERAFK_ON:
         shite = await event.client.send_message(
             event.chat_id,
-            "`Beck To Alive! No Longer AFK!.\nWas AFK! For " + endtime + "`",
+            "`Back To Alive! No Longer AFK!.\nWas AFK! Since " + endtime + "`",
         )
         USERAFK_ON = {}
         afk_time = None
@@ -62,7 +62,7 @@ async def set_not_afk(event):
             await event.client.send_message(
                 BOTLOG_CHATID,
                 "#AFKFALSE \n`Set AFK Mode To False\n"
-                + "Back Alive! No Longer AFK.\nWas AFK For "
+                + "Back To Alive! No Longer AFK.\nWas AFK Since "
                 + endtime
                 + "`",
             )
