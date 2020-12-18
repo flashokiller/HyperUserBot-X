@@ -6,8 +6,8 @@ from telethon import version
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 from . import CMD_HELP, StartTime, catdef, catversion, hmention, mention, reply_id
 
-CAT_IMG = Config.ALIVE_PIC
-CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "➥ MY BOT IS RUNNING SUCCESFULLY "
+CAT_IMG = Config.ALIVE_PIC "https://telegra.ph/file/8efdc9471665e49c924c9.png"
+CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "➥ HyperUserBot-X Bot Is Running Successfully!"
 EMOJI = Config.CUSTOM_ALIVE_EMOJI or "➥"
 
 
