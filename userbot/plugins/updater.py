@@ -41,7 +41,7 @@ async def print_changelogs(event, ac_br, changelog):
         f"**New UPDATE available for [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`"
     )
     if len(changelog_str) > 4096:
-        await event.edit("`Changelog is too big, view the file to see it.`")
+        await event.edit("`Changelog Is Too Big, View The File To See It.`")
         with open("output.txt", "w+") as file:
             file.write(changelog_str)
         await event.client.send_file(
@@ -97,7 +97,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             return repo.__del__()
         await event.edit(
-            "`[HEROKU]`" "\n`Userbot dyno build in progress, please wait...`"
+            "`[HEROKU]`" "\n`HyperUserBot-X Dyno Build In Progress, Please Wait...`"
         )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -117,11 +117,13 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         build = app.builds(order_by="created_at", sort="desc")[0]
         if build.status == "failed":
             await event.edit(
-                "`Build failed!\n" "Cancelled or there were some errors...`"
+                "`Build failed!\n" "Cancelled Or There Were Some Errors...`"
             )
             await asyncio.sleep(5)
             return await event.delete()
-        await event.edit("`Successfully deployed!\n" "Restarting, please wait...`")
+        await event.edit(
+            "`Successfully Deployed HyperUserBot-X!\n" "Restarting, Please Wait...`"
+        )
     else:
         await event.edit(
             "`[HEROKU]`\n" "`Please set up`  **HEROKU_API_KEY**  ` Var...`"
@@ -136,7 +138,7 @@ async def update(event, repo, ups_rem, ac_br):
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
     await event.edit(
-        "`Successfully Updated!\n" "Bot is restarting... Wait for a minute!`"
+        "`Successfully Updated!\n" "Bot Is Restarting... Wait For A Minutes!`"
     )
     # Spin a new instance of bot
     args = [sys.executable, "-m", "userbot"]
@@ -149,14 +151,16 @@ async def update(event, repo, ups_rem, ac_br):
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     conf = event.pattern_match.group(1).strip()
-    event = await edit_or_reply(event, "`Checking for updates, please wait....`")
+    event = await edit_or_reply(
+        event, "`Checking HyperUserBot-X For Updates, Please Wait....`"
+    )
     off_repo = UPSTREAM_REPO_URL
     force_update = False
     # if HEROKU_API_KEY or HEROKU_APP_NAME is None:
     # return await edit_or_reply(event, "`Set the required vars first to update the bot`")
     try:
-        txt = "`Oops.. Updater cannot continue due to "
-        txt += "some problems occured`\n\n**LOGTRACE:**\n"
+        txt = "`Oops.. Updater Cannot Continue Due To "
+        txt += "Some Problem's Occured`\n\n**LOGTRACE:**\n"
         repo = Repo()
     except NoSuchPathError as error:
         await event.edit(f"{txt}\n`directory {error} is not found`")
@@ -168,8 +172,8 @@ async def upstream(event):
         if conf is None:
             return await event.edit(
                 f"`Unfortunately, the directory {error} "
-                "does not seem to be a git repository.\n"
-                "But we can fix that by force updating the userbot using "
+                "Does Not Seem To Be A Git Repository.\n"
+                "But We Can Fix That By Force Updating The HyperUserBot-X Using "
                 ".update now.`"
             )
         repo = Repo.init()
@@ -183,10 +187,10 @@ async def upstream(event):
     if ac_br != UPSTREAM_REPO_BRANCH:
         await event.edit(
             "**[UPDATER]:**\n"
-            f"`Looks like you are using your own custom branch ({ac_br}). "
-            "in that case, Updater is unable to identify "
-            "which branch is to be merged. "
-            "please checkout to any official branch`"
+            f"`Looks Like You Are Using Your Own Custom Branch ({ac_br}). "
+            "In That Case, Updater Is Unable To Identify "
+            "Which Branch Is To Be Merged. "
+            "Please Checkout To Any Official Branch`"
         )
         return repo.__del__()
     try:
@@ -196,14 +200,14 @@ async def upstream(event):
     ups_rem = repo.remote("upstream")
     ups_rem.fetch(ac_br)
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
-    # Special case for deploy
+    # Special Case For Deploy
     if conf == "deploy":
-        await event.edit("`Deploying userbot, please wait....`")
+        await event.edit("`Deploying HyperUserBot-X, Please Wait....`")
         await deploy(event, repo, ups_rem, ac_br, txt)
         return
     if changelog == "" and not force_update:
         await event.edit(
-            "\n`HyperUserBot-X is`  **up-to-date**  `with`  "
+            "\n`HyperUserBot-X Bad Is`  **Up-To-Date**  `With`  "
             f"**{UPSTREAM_REPO_BRANCH}**\n"
         )
         return repo.__del__()
@@ -211,24 +215,26 @@ async def upstream(event):
         await print_changelogs(event, ac_br, changelog)
         await event.delete()
         return await event.respond(
-            'do "[`.update now`] or [`.update deploy`]" to update.Check `.info updater` for details'
+            'Do "[`.update now`] Or [`.update deploy`]" To update.Check `.info Updater` For Details'
         )
 
     if force_update:
         await event.edit(
-            "`Force-Syncing to latest stable userbot code, please wait...`"
+            "`Force-Syncing To Latest Stable HyperUserBot-X Code, Please Wait...`"
         )
     if conf == "now":
-        await event.edit("`Updating userbot, please wait....`")
+        await event.edit("`Updating HyperUserBot-X, Please Wait....`")
         await update(event, repo, ups_rem, ac_br)
     return
 
 
-@bot.on(admin_cmd(outgoing=True, pattern=r"goodcat$"))
+@bot.on(admin_cmd(outgoing=True, pattern=r"goodhyp$"))
 @bot.on(sudo_cmd(pattern="goodhyp$", allow_sudo=True))
 async def upstream(event):
-    event = await edit_or_reply(event, "`Pulling the HyperGood repo wait a sec ....`")
-    off_repo = "https://github.com/ahirearyan2/HyperUserBot-X"
+    event = await edit_or_reply(
+        event, "`Pulling the HyperUserBot-X Good Repo Wait A Seconds ....`"
+    )
+    off_repo = "https://github.com/ahirearyan2/HyperUserBot-X.git"
     catcmd = f"rm -rf .git"
     try:
         await runcmd(catcmd)
@@ -242,7 +248,7 @@ async def upstream(event):
         await event.edit(f"{txt}\n`directory {error} is not found`")
         return repo.__del__()
     except GitCommandError as error:
-        await event.edit(f"{txt}\n`Early failure! {error}`")
+        await event.edit(f"{txt}\n`Early Failures! {error}`")
         return repo.__del__()
     except InvalidGitRepositoryError:
         repo = Repo.init()
@@ -258,7 +264,7 @@ async def upstream(event):
     ac_br = repo.active_branch.name
     ups_rem = repo.remote("upstream")
     ups_rem.fetch(ac_br)
-    await event.edit("`Deploying userbot, please wait....`")
+    await event.edit("`Deploying HyperUserBot-X, Please Wait....`")
     await deploy(event, repo, ups_rem, ac_br, txt)
 
 
@@ -266,15 +272,15 @@ CMD_HELP.update(
     {
         "updater": "__**PLUGIN NAME :** Updater__\
         \n\n📌** CMD ➥** `.update`\
-        \n**Usage :** Checks if the main userbot repository has any updates\
-        \nand shows a changelog if so.\
+        \n**Usage :** Check If The Main HyperUserBot-X Bad Repository Has Any Updates\
+        \nand Shows A Changelog If So.\
         \n\n📌** CMD ➥** `.update now`\
-        \n**USAGE   ➥  **Update your userbot,\
-        \nif there are any updates in your userbot repository.if you restart these goes back to last time when you deployed\
+        \n**USAGE   ➥  **Update Your HyperUserBot-X,\
+        \nif There Are Any Updates In Your HyperUserBot-X Bad Repository.If You Restart These Goes Back To Last Time When You Deployed\
         \n\n📌** CMD ➥** `.update deploy`\
-        \n**USAGE   ➥  **Deploy your userbot.So even you restart it doesnt go back to previous version\
+        \n**USAGE   ➥  **Deploy Your HyperUserBot-X Bad .So Even You Restart It Doesn't Go Back To Previous Version\
         \n\n📌** CMD ➥** `.goodhyp`\
-        \n**USAGE   ➥  **Swich to NotShroud repo to Aryan Ahire HyperUserBot-X repo.\
-        \nThis will triggered deploy always, even no updates."
+        \n**USAGE   ➥  **Swich To HyperUserBot-X Bad Repo To HyperUserBot-X Repo.\
+        \nThis Will Triggered Deploy Always, Even No Updates."
     }
 )
