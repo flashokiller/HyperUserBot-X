@@ -76,11 +76,6 @@
       "value": "",
       "required": false
     },
-    "ALIVE_PIC": {
-      "description": "the pic that to show in your alive message url.",
-      "value": "",
-      "required": false
-    },
     "AUTONAME": {
       "description": "for .autoname command",
       "value": "",
