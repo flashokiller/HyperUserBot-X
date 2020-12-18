@@ -90,7 +90,9 @@ class Config((object)):
     # specify LOAD and NO_LOAD
     NO_LOAD = [x for x in os.environ.get("NO_LOAD", "").split()]
     # in alive message pic
-    ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
+    ALIVE_PIC = os.environ.get(
+        "ALIVE_PIC", "https://telegra.ph/file/8efdc9471665e49c924c9.png"
+    )
     # in pm permit pic
     PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
     CUSTOM_PMPERMIT_TEXT = os.environ.get("CUSTOM_PMPERMIT_TEXT", None)
