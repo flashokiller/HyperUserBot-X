@@ -3,13 +3,13 @@ from platform import python_version
 
 from telethon import version
 
-from ..utils import admin_cmd, edit_or_reply, sudo_cmd
-from . import CMD_HELP, StartTime, catdef, catversion, hmention, mention, reply_id
+from . import StartTime, catdef, catversion, hmention, mention, reply_id
+
+# backup
+
 
 CAT_IMG = Config.ALIVE_PIC
-CUSTOM_ALIVE_TEXT = (
-    Config.CUSTOM_ALIVE_TEXT or "➥ HyperUserBot-X Bot Is Running Successfully!"
-)
+CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "➥ BadHyperUserBot-X Is Running Successfully!"
 EMOJI = Config.CUSTOM_ALIVE_EMOJI or "➥"
 
 
@@ -23,19 +23,19 @@ async def amireallyalive(alive):
     _, check_sgnirts = check_data_base_heal_th()
     if CAT_IMG:
         cat_caption = f"<b>{CUSTOM_ALIVE_TEXT}</b>\n\n"
-        cat_caption += f"<b>{EMOJI} Master : {hmention}</b>\n"
+        cat_caption += f"<b>{EMOJI} My Peru Master : {hmention}</b>\n"
         cat_caption += f"<b>{EMOJI} Uptime :</b> <code>{uptime}</code>\n"
         cat_caption += (
             f"<b>{EMOJI} Python Version :</b> <code>{python_version()}</code>\n"
         )
         cat_caption += (
-            f"<b>{EMOJI} Telethon version :</b> <code>{version.__version__}</code>\n"
+            f"<b>{EMOJI} Telethon Version :</b> <code>{version.__version__}</code>\n"
         )
         cat_caption += (
-            f"<b>{EMOJI} HyperUserBot-X Version :</b> <code>{catversion}</code>\n"
+            f"<b>{EMOJI} BadHyperUserBot-X Version :</b> <code>{BadHyperUserBot-XVersion}</code>\n"
         )
         cat_caption += f"<b>{EMOJI} Database :</b> <code>{check_sgnirts}</code>\n\n"
-        cat_caption += "    <a href = https://github.com/ahirearyan2/HyperUserBot-X><b>GoodHyper</b></a> | <a href = https://github.com/NotShroudX97/HyperUserBot-X><b>BadHyper</b></a> | <a href = https://t.me/HyperUserBotXSupport><b>Support</b></a>"
+        cat_caption += "    <a href = https://github.com/ahirearyan2/HyperUserBot-X><b>GoodHyper</b></a> | <a href = https://github.com/NotShroudX97/HyperUserBot-X><b>BadHyper</b></a> | <a href = https://t.me/HyperUserBotXsupport><b>Support</b></a>"
         await alive.client.send_file(
             alive.chat_id,
             CAT_IMG,
@@ -49,14 +49,14 @@ async def amireallyalive(alive):
     else:
         await edit_or_reply(
             alive,
-            f"<b>{CUSTOM_ALIVE_TEXT} HyperUserBot-X Is - Running Successfully!</b>\n\n"
-            f"<b>{EMOJI} Master : {hmention}</b>\n"
+            f"<b>{CUSTOM_ALIVE_TEXT}</b>\n\n"
+            f"<b>{EMOJI} My Peru Master : {hmention}</b>\n"
             f"<b>{EMOJI} Uptime :</b> <code>{uptime}</code>\n"
             f"<b>{EMOJI} Python Version :</b> <code>{python_version()}</code>\n"
-            f"<b>{EMOJI} Telethon version :</b> <code>{version.__version__}</code>\n"
-            f"<b>{EMOJI} HyperUserBot-X Version :</b> <code>{catversion}</code>\n"
+            f"<b>{EMOJI} Telethon Version :</b> <code>{version.__version__}</code>\n"
+            f"<b>{EMOJI} BadHyperUserBot-X Version :</b> <code>{BadHyperUserBot-XVersion}</code>\n"
             f"<b>{EMOJI} Database :</b> <code>{check_sgnirts}</code>\n\n"
-            "    <a href = https://github.com/ahirearyan2/HyperUserBot-X><b>HyperUserBot-X1</b></a> | <a href = https://github.com/NotShroudX97/HyperUserBot-X><b>HyperUserBot-X2</b></a> | <a href = https://t.me/HyperUserBotXSupport><b>Support</b></a>",
+            "    <a href = https://github.com/ahirearyan2/HyperUserBot-X><b>GoodHyper</b></a> | <a href = https://github.com/NotShroudX97/HyperUserBot-X><b>BadHyper</b></a> | <a href = https://t.me/HyperUserBotXsupport><b>Support</b></a>",
             parse_mode="html",
         )
 
@@ -68,17 +68,17 @@ async def amireallyalive(alive):
         return
     tgbotusername = Config.TG_BOT_USER_NAME_BF_HER
     reply_to_id = await reply_id(alive)
-    cat_caption = f"**Catuserbot is Up and Running**\n"
-    cat_caption += f"**  -Master :** {mention}\n"
+    cat_caption = f"**BadHyperUserBot-X Is Up And Running**\n"
+    cat_caption += f"**  - My Peru Master :** {mention}\n"
     cat_caption += f"**  -Python Version :** `{python_version()}\n`"
-    cat_caption += f"**  -Telethon version :** `{version.__version__}\n`"
-    cat_caption += f"**  -Catuserbot Version :** `{catversion}`\n"
+    cat_caption += f"**  -Telethon Version :** `{version.__version__}\n`"
+    cat_caption += f"**  -BadHyperUserBot-X Version :** `{BadHyperUserBot-XVersion}`\n"
     results = await bot.inline_query(tgbotusername, cat_caption)  # pylint:disable=E0602
     await results[0].click(alive.chat_id, reply_to=reply_to_id, hide_via=True)
     await alive.delete()
 
 
-# UniBorg Telegram UserBot
+# UniBorg Telegram UseRBot
 # Copyright (C) 2020 @UniBorg
 # This code is licensed under
 # the "you can't use this for anything - public or private,

@@ -5,8 +5,7 @@ from datetime import datetime
 from telethon import events
 from telethon.tl import functions, types
 
-from ..utils import admin_cmd
-from . import BOTLOG, BOTLOG_CHATID, CMD_HELP
+from . import BOTLOG, BOTLOG_CHATID
 
 global USERAFK_ON
 global afk_time
@@ -52,7 +51,7 @@ async def set_not_afk(event):
     if "afk" not in current_message and "on" in USERAFK_ON:
         shite = await event.client.send_message(
             event.chat_id,
-            "`Back To Alive! No Longer AFK!.\nWas AFK! Since " + endtime + "`",
+            "`Back To Alive! No Longer AFK!.\nWas AFK! Since" + endtime + "`",
         )
         USERAFK_ON = {}
         afk_time = None
@@ -62,7 +61,7 @@ async def set_not_afk(event):
             await event.client.send_message(
                 BOTLOG_CHATID,
                 "#AFKFALSE \n`Set AFK Mode To False\n"
-                + "Back To Alive! No Longer AFK.\nWas AFK Since "
+                + "Back To Alive! No Longer AFK!.\nWas AFK! Since"
                 + endtime
                 + "`",
             )
@@ -108,11 +107,17 @@ async def on_afk(event):
     if USERAFK_ON and not (await event.get_sender()).bot:
         msg = None
         if link and reason:
-            message_to_reply = f"**My Peru Master Is AFK Now**\n\n**AFK Since :** `{endtime}`\n**Reason : **{reason}"
+            message_to_reply = (
+                f"**My Peru Master Is AFK Now**\n\n**AFK Since :** `{endtime}`\n**Reason : **{reason}"
+            )
         elif reason:
-            message_to_reply = f"**My Peru Master Is AFK Now\n\nAFK Since :** `{endtime}`\n**Reason : **`{reason}`"
+            message_to_reply = (
+                f"**My Peru Master Is AFK Now**\n\n**AFK Since :** `{endtime}`\n**Reason : **`{reason}`"
+            )
         else:
-            message_to_reply = f"`My Peru Master Is AFK Now\n\nAFK Since :{endtime}\nReason : Not Mentioned (SedLyf!)`"
+            message_to_reply = (
+                f"`My Peru Master Is AFK Now**\n\n**AFK Since : :{endtime}\nReason : Not Mentioned (SedLyf OoF!)`"
+            )
         if event.chat_id not in Config.UB_BLACK_LIST_CHAT:
             msg = await event.reply(message_to_reply)
         if event.chat_id in last_afk_message:
@@ -164,11 +169,9 @@ async def _(event):
             afk_time = datetime.now()
         USERAFK_ON = f"on: {reason}"
         if reason:
-            await edit_delete(
-                event, f"`My Peru Master Will Be Going AFK! Because ~` {reason}", 5
-            )
+            await edit_delete(event, f"`My Peru Master Will Be Going AFK! Because ~` {reason}", 5)
         else:
-            await edit_delete(event, f"`My Peru Master Will Be Going AFK!`", 5)
+            await edit_delete(event, f"`My Peru Master Will Be Going AFK! `", 5)
         if BOTLOG:
             if reason:
                 await event.client.send_message(

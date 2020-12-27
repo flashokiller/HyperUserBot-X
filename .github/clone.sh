@@ -31,14 +31,16 @@ if [ -d "$FILE" ] ; then
 else
     rm -rf userbot
     rm -rf .github
-    rm -rf requirements.txt
-    git clone https://github.com/NotShroudX97/HyperUserBot-X HUB
-    mv HUB/userbot .
-    mv HUB/.github . 
-    mv HUB/.git .
-    mv HUB/requirements.txt .
-    rm -rf HUB
+    rm -rf sample_config.py
+    git clone https://github.com/Jisan09/catuserbot cat_ub
+    mv cat_ub/userbot .
+    mv cat_ub/.github . 
+    mv cat_ub/.git .
+    mv cat_ub/sample_config.py .
     python ./.github/update.py
+    rm -rf requirements.txt
+    mv cat_ub/requirements.txt .
+    rm -rf cat_ub
 fi
 
 FILE=/app/bin/

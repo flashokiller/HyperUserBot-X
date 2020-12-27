@@ -1,6 +1,6 @@
 {
-  "name": "HyperUserBot-X",
-  "description": "HyperUserBot-X Created By https://t.me/HyperUserBotXSupport Contact @NotShroudX97 For Support",
+  "name": "BadHyperUserBot-X",
+  "description": "BadHyperUserBot-X Created By https://t.me/NotShroudX97 Contact @HyperUserBotXSupport For Support And Custom Fork By @NotShroudX97",
   "logo": "https://telegra.ph/file/8efdc9471665e49c924c9.png",
   "keywords": [
     "telegram",
@@ -14,16 +14,16 @@
   "success_url": "#TODO",
   "env": {
     "ENV": {
-      "description": "Setting this to ANYTHING will enable heroku.",
+      "description": "Setting This To Anything Will Enable Heroku.",
       "value": "ANYTHING"
     },
     "TMP_DOWNLOAD_DIRECTORY": {
-      "description": "Where downloaded files will go.",
+      "description": "Where Downloaded Files Will Go.",
       "value": "./DOWNLOADS/",
       "required": false
     },
     "ALIVE_NAME": {
-      "description": "Give your name, like @NotShroudX97",
+      "description": "Give Your Name, Like NotShroudX97",
       "value": ""
     },
     "APP_ID": {
@@ -73,6 +73,11 @@
     },
     "REM_BG_API_KEY": {
       "description": "Required for Removing image background functionality. Get from https://www.remove.bg/",
+      "value": "",
+      "required": false
+    },
+    "ALIVE_PIC": {
+      "description": "the pic that to show in your alive message url.",
       "value": "",
       "required": false
     },

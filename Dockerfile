@@ -1,4 +1,4 @@
-FROM sandy1709/catuserbot:latest
+FROM ahirearyan2/HyperUserBot-X:Latest
 
 #clonning repo 
 RUN git clone https://github.com/NotShroudX97/HyperUserBot-X.git /root/userbot

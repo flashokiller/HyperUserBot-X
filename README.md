@@ -1,5 +1,5 @@
 
-#HyperTeam & HyperUserBot-X! 🔰
+# CAT USERBOT
 
 ### The Easy Way to deploy the bot
 Get APP ID and API HASH from [HERE](https://my.telegram.org) and BOT TOKEN from [Bot Father](https://t.me/botfather) and then Generate stringsession by clicking on run.on.repl.it button below and then click on deploy to heroku . Before clicking on deploy to heroku just click on fork and star just below
@@ -8,8 +8,8 @@ Get APP ID and API HASH from [HERE](https://my.telegram.org) and BOT TOKEN from 
 
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/NotShroudX97/HyperUserBot-X)
 <p align="center">
-  <a href="https://github.com/Jisan09/catuserbot/fork">
-    <img src="https://img.shields.io/github/forks/Jisan09/catuserbot?label=Fork&style=social">
+  <a href="https://github.com/NotShroudX97/HyperUserBot-X/fork">
+    <img src="https://img.shields.io/github/forks/NotShroudX97/HyperUserBot-X?label=Fork&style=social">
     
   </a>
   <a href="https://github.com/NotShroudX97/HyperUserBot-X">
@@ -21,8 +21,7 @@ Get APP ID and API HASH from [HERE](https://my.telegram.org) and BOT TOKEN from 
 [![HyperUserBot-X Logo](https://telegra.ph/file/8efdc9471665e49c924c9.png)](https://heroku.com/deploy)
 
 
-### Join [Here](https://t.me/HyperUserBotXSupport) For Updates And Tutorial And [Here](https://t.me/HyperUserBotXSupport) For 
-Discussions Bugs
+### PM [Here](https://t.me/NotShroudX97) For Enquiry And Help [Here](https://t.me/HyperUserBotXSupport) For Discussion And Bugs
 
 ### The Normal Way
 
