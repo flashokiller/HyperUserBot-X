@@ -13,7 +13,7 @@ from telethon.sessions import StringSession
 from .Config import Config
 
 StartTime = time.time()
-BadHyperUserBpt-X Version = "2.10.1"
+BadHyperUserBot-X Version = "2.10.1"
 
 if Config.STRING_SESSION:
     session_name = str(Config.STRING_SESSION)
