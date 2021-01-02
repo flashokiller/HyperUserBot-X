@@ -3,7 +3,7 @@ from platform import python_version
 
 from telethon import version
 
-from . import StartTime, BadHyperVersion, catdef, hmention, mention, reply_id
+from . import BadHyperVersion, StartTime, catdef, hmention, mention, reply_id
 
 # backup
 
