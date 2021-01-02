@@ -3,13 +3,15 @@ from platform import python_version
 
 from telethon import version
 
-from . import StartTime, catdef, catversion, hmention, mention, reply_id
+from . import StartTime, catdef, hmention, mention, reply_id
 
 # backup
 
 
 CAT_IMG = Config.ALIVE_PIC
-CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "➥ BadHyperUserBot-X Is Running Successfully!"
+CUSTOM_ALIVE_TEXT = (
+    Config.CUSTOM_ALIVE_TEXT or "➥ BadHyperUserBot-X Is Running Successfully!"
+)
 EMOJI = Config.CUSTOM_ALIVE_EMOJI or "➥"
 
 
@@ -31,9 +33,7 @@ async def amireallyalive(alive):
         cat_caption += (
             f"<b>{EMOJI} Telethon Version :</b> <code>{version.__version__}</code>\n"
         )
-        cat_caption += (
-            f"<b>{EMOJI} BadHyperUserBot-X Version :</b> <code>{BadHyperUserBot-XVersion}</code>\n"
-        )
+        cat_caption += f"<b>{EMOJI} BadHyperUserBot-X Version :</b> <code>{BadHyperUserBot-XVersion}</code>\n"
         cat_caption += f"<b>{EMOJI} Database :</b> <code>{check_sgnirts}</code>\n\n"
         cat_caption += "    <a href = https://github.com/ahirearyan2/HyperUserBot-X><b>GoodHyper</b></a> | <a href = https://github.com/NotShroudX97/HyperUserBot-X><b>BadHyper</b></a> | <a href = https://t.me/HyperUserBotXsupport><b>Support</b></a>"
         await alive.client.send_file(

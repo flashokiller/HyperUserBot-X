@@ -36,9 +36,7 @@ async def gen_chlog(repo, diff):
 
 
 async def print_changelogs(event, ac_br, changelog):
-    changelog_str = (
-        f"**New Updates Available For BadHyperUserBot-X [{ac_br}]:\n\nChangelogs:**\n`{changelog}`"
-    )
+    changelog_str = f"**New Updates Available For BadHyperUserBot-X [{ac_br}]:\n\nChangelogs:**\n`{changelog}`"
     if len(changelog_str) > 4096:
         await event.edit("`Changelog Is Too Big, View The File To See It.`")
         with open("output.txt", "w+") as file:
@@ -120,7 +118,9 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             await asyncio.sleep(5)
             return await event.delete()
-        await event.edit("`Successfully Deployed BadHyperUserBot-X!\n" "Restarting, Please Wait...`")
+        await event.edit(
+            "`Successfully Deployed BadHyperUserBot-X!\n" "Restarting, Please Wait...`"
+        )
     else:
         await event.edit(
             "`[HEROKU]`\n" "`Please set up`  **HEROKU_API_KEY**  ` Var...`"
@@ -148,7 +148,9 @@ async def update(event, repo, ups_rem, ac_br):
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     conf = event.pattern_match.group(1).strip()
-    event = await edit_or_reply(event, "`Checking BadHyperUserBot-X For Updates, Please Wait....`")
+    event = await edit_or_reply(
+        event, "`Checking BadHyperUserBot-X For Updates, Please Wait....`"
+    )
     off_repo = UPSTREAM_REPO_URL
     force_update = False
     # if HEROKU_API_KEY or HEROKU_APP_NAME is None:
@@ -226,7 +228,9 @@ async def upstream(event):
 @bot.on(admin_cmd(outgoing=True, pattern=r"goodcat$"))
 @bot.on(sudo_cmd(pattern="goodcat$", allow_sudo=True))
 async def upstream(event):
-    event = await edit_or_reply(event, "`Pulling The GoodHyperUserBot-X Repo Wait A Seconds ....`")
+    event = await edit_or_reply(
+        event, "`Pulling The GoodHyperUserBot-X Repo Wait A Seconds ....`"
+    )
     off_repo = "https://github.com/ahirearyan2/HyperUserBot-X.git"
     catcmd = f"rm -rf .git"
     try:
