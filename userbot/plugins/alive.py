@@ -33,7 +33,7 @@ async def amireallyalive(alive):
         cat_caption += (
             f"<b>{EMOJI} Telethon Version :</b> <code>{version.__version__}</code>\n"
         )
-        cat_caption += f"<b>{EMOJI} BadHyperUserBot-X Version :</b> <code>{BadHyperUserBot-XVersion}</code>\n"
+        cat_caption += f"<b>{EMOJI} BadHyperUserBot-X Version :</b> <code>{BadHyperVersion}</code>\n"
         cat_caption += f"<b>{EMOJI} Database :</b> <code>{check_sgnirts}</code>\n\n"
         cat_caption += "    <a href = https://github.com/ahirearyan2/HyperUserBot-X><b>GoodHyper</b></a> | <a href = https://github.com/NotShroudX97/HyperUserBot-X><b>BadHyper</b></a> | <a href = https://t.me/HyperUserBotXsupport><b>Support</b></a>"
         await alive.client.send_file(
@@ -54,7 +54,7 @@ async def amireallyalive(alive):
             f"<b>{EMOJI} Uptime :</b> <code>{uptime}</code>\n"
             f"<b>{EMOJI} Python Version :</b> <code>{python_version()}</code>\n"
             f"<b>{EMOJI} Telethon Version :</b> <code>{version.__version__}</code>\n"
-            f"<b>{EMOJI} BadHyperUserBot-X Version :</b> <code>{BadHyperUserBot-XVersion}</code>\n"
+            f"<b>{EMOJI} BadHyperUserBot-X Version :</b> <code>{BadHyperVersion}</code>\n"
             f"<b>{EMOJI} Database :</b> <code>{check_sgnirts}</code>\n\n"
             "    <a href = https://github.com/ahirearyan2/HyperUserBot-X><b>GoodHyper</b></a> | <a href = https://github.com/NotShroudX97/HyperUserBot-X><b>BadHyper</b></a> | <a href = https://t.me/HyperUserBotXsupport><b>Support</b></a>",
             parse_mode="html",
@@ -72,7 +72,7 @@ async def amireallyalive(alive):
     cat_caption += f"**  - My Peru Master :** {mention}\n"
     cat_caption += f"**  -Python Version :** `{python_version()}\n`"
     cat_caption += f"**  -Telethon Version :** `{version.__version__}\n`"
-    cat_caption += f"**  -BadHyperUserBot-X Version :** `{BadHyperUserBot-XVersion}`\n"
+    cat_caption += f"**  -BadHyperUserBot-X Version :** `{BadHyperVersion}`\n"
     results = await bot.inline_query(tgbotusername, cat_caption)  # pylint:disable=E0602
     await results[0].click(alive.chat_id, reply_to=reply_to_id, hide_via=True)
     await alive.delete()
