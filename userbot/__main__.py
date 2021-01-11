@@ -26,8 +26,8 @@ else:
         bot.tgbot = TelegramClient(
             "TG_BOT_TOKEN", api_id=Config.APP_ID, api_hash=Config.API_HASH
         ).start(bot_token=Config.TG_BOT_TOKEN_BF_HER)
-        LOGS.info("Initialisation Finished With No Errors")
-        LOGS.info("Starting BadHyperUserBot-X")
+        LOGS.info("Initialisation finished with no errors")
+        LOGS.info("Starting Userbot")
         bot.loop.run_until_complete(add_bot(Config.TG_BOT_USER_NAME_BF_HER))
         LOGS.info("Startup Completed")
     else:
@@ -42,6 +42,7 @@ for name in files:
         if shortname.replace(".py", "") not in Config.NO_LOAD:
             load_module(shortname.replace(".py", ""))
 
+LOGS.info("
 LOGS.info("Yay Your BadHyperUserBot-X Is Officially Working!!!")
 LOGS.info(
     "Congratulation, Now Type .alive To See Message If Bot Is Live\n"

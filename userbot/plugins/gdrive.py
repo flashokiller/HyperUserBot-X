@@ -25,6 +25,7 @@ from googleapiclient.http import MediaFileUpload, MediaIoBaseDownload
 from telethon import events
 
 from . import (
+    BOTLOG,
     BOTLOG_CHATID,
     G_DRIVE_CLIENT_ID,
     G_DRIVE_CLIENT_SECRET,
@@ -975,23 +976,9 @@ async def lists(gdrive):
     del result
     if query == "":
         query = "Not specified"
-    if len(message) > 4096:
-        event = gdrive
-        gdrive = await edit_or_reply(
-            gdrive, "`Result is too big, sending it as file...`"
-        )
-        with open("result.txt", "w") as r:
-            r.write(f"Google Drive Query:\n{query}\n\nResults\n\n{message}")
-        await event.client.send_file(
-            event.chat_id,
-            "result.await edit_or_reply(gdrive ,txt",
-            caption="Google Drive Query List.",
-        )
-    else:
-        await edit_or_reply(
-            gdrive, "**Google Drive Query**:\n" f"`{query}`\n\n**Results**\n\n{message}"
-        )
-    return
+    await edit_or_reply(
+        gdrive, "**Google Drive Query**:\n" f"`{query}`\n\n**Results**\n\n{message}"
+    )
 
 
 @bot.on(

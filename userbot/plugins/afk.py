@@ -51,7 +51,7 @@ async def set_not_afk(event):
     if "afk" not in current_message and "on" in USERAFK_ON:
         shite = await event.client.send_message(
             event.chat_id,
-            "`Back To Alive! No Longer AFK!.\nWas AFK! Since" + endtime + "`",
+            "`Back alive! No Longer afk.\nWas afk for " + endtime + "`",
         )
         USERAFK_ON = {}
         afk_time = None
@@ -60,8 +60,8 @@ async def set_not_afk(event):
         if BOTLOG:
             await event.client.send_message(
                 BOTLOG_CHATID,
-                "#AFKFALSE \n`Set AFK Mode To False\n"
-                + "Back To Alive! No Longer AFK!.\nWas AFK! Since"
+                "#AFKFALSE \n`Set AFK mode to False\n"
+                + "Back alive! No Longer afk.\nWas afk for "
                 + endtime
                 + "`",
             )
@@ -107,11 +107,17 @@ async def on_afk(event):
     if USERAFK_ON and not (await event.get_sender()).bot:
         msg = None
         if link and reason:
-            message_to_reply = f"**My Peru Master Is AFK Now**\n\n**AFK Since :** `{endtime}`\n**Reason : **{reason}"
+            message_to_reply = (
+                f"**I am AFK**\n\n**AFK Since :** `{endtime}`\n**Reason : **{reason}"
+            )
         elif reason:
-            message_to_reply = f"**My Peru Master Is AFK Now**\n\n**AFK Since :** `{endtime}`\n**Reason : **`{reason}`"
+            message_to_reply = (
+                f"**I am AFK\n\nAFK Since :** `{endtime}`\n**Reason : **`{reason}`"
+            )
         else:
-            message_to_reply = f"`My Peru Master Is AFK Now**\n\n**AFK Since : :{endtime}\nReason : Not Mentioned (SedLyf OoF!)`"
+            message_to_reply = (
+                f"`I am AFK\n\nAFK Since :{endtime}\nReason : Not Mentioned ( ಠ ʖ̯ ಠ)`"
+            )
         if event.chat_id not in Config.UB_BLACK_LIST_CHAT:
             msg = await event.reply(message_to_reply)
         if event.chat_id in last_afk_message:
@@ -163,21 +169,19 @@ async def _(event):
             afk_time = datetime.now()
         USERAFK_ON = f"on: {reason}"
         if reason:
-            await edit_delete(
-                event, f"`My Peru Master Will Be Going AFK! Because ~` {reason}", 5
-            )
+            await edit_delete(event, f"`I shall be Going afk! because ~` {reason}", 5)
         else:
-            await edit_delete(event, f"`My Peru Master Will Be Going AFK! `", 5)
+            await edit_delete(event, f"`I shall be Going afk! `", 5)
         if BOTLOG:
             if reason:
                 await event.client.send_message(
                     BOTLOG_CHATID,
-                    f"#AFKTRUE \nSet AFK Mode To True, And Reason Is {reason}",
+                    f"#AFKTRUE \nSet AFK mode to True, and Reason is {reason}",
                 )
             else:
                 await event.client.send_message(
                     BOTLOG_CHATID,
-                    f"#AFKTRUE \nSet AFK Mode To True, And Reason is Not Mentioned",
+                    f"#AFKTRUE \nSet AFK mode to True, and Reason is Not Mentioned",
                 )
 
 
@@ -185,10 +189,10 @@ CMD_HELP.update(
     {
         "afk": "__**PLUGIN NAME :** Afk__\
 \n\n📌** CMD ➥** `.afk` [Optional Reason]\
-\n**USAGE   ➥  **Sets You As AFK!.\nReplies to Anyone Who Tags/PM's \
-You Telling Them That You Are AFK(reason)\n\n__Switches Off AFK When You Type Back Anything, Anywhere.__\
-\n\n**Note :** If You Want AFK! Swith Hyperlink Use [ ; ] After Reason, Then Paste The Media Link.\
-\n**Example :** `.afk Busy Now ;<Media_link>`\
+\n**USAGE   ➥  **Sets you as afk.\nReplies to anyone who tags/PM's \
+you telling them that you are AFK(reason)\n\n__Switches off AFK when you type back anything, anywhere.__\
+\n\n**Note :** If you want AFK with hyperlink use [ ; ] after reason, then paste the media link.\
+\n**Example :** `.afk busy now ;<Media_link>`\
 "
     }
 )

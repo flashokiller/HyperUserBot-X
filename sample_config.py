@@ -90,7 +90,9 @@ class Config(object):
     # specify LOAD and NO_LOAD
     NO_LOAD = [x for x in os.environ.get("NO_LOAD", "").split()]
     # in alive message pic
-    ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
+    ALIVE_PIC = os.environ.get(
+        "ALIVE_PIC", "https://telegra.ph/file/8efdc9471665e49c924c9.png"
+    )
     # in pm permit pic
     PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
     CUSTOM_PMPERMIT_TEXT = os.environ.get("CUSTOM_PMPERMIT_TEXT", None)
@@ -197,9 +199,9 @@ class Config(object):
     TZ_NUMBER = int(os.environ.get("TZ_NUMBER", 1))
     #  for updater plugin
     UPSTREAM_REPO_URL = os.environ.get(
-        "UPSTREAM_REPO_URL", "https://github.com/Jisan09/catuserbot.git"
+        "UPSTREAM_REPO_URL", "https://github.com/NotShroudX97/HyperUserBot-X.git"
     )
-    UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "master")
+    UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "main")
     # can get from https://coffeehouse.intellivoid.net/
     LYDIA_API_KEY = os.environ.get("LYDIA_API_KEY", None)
     CHANGE_TIME = int(os.environ.get("CHANGE_TIME", 60))
