@@ -1,7 +1,7 @@
-FROM sandy1709/catuserbot:latest
+FROM NotShroudX97/HyperUserBot-X:Latest
 
 #clonning repo 
-RUN git clone https://github.com/Jisan09/catuserbot.git /root/userbot
+RUN git clone https://github.com/NotShroudX97/HyperUserBot-X.git /root/userbot
 #working directory 
 WORKDIR /root/userbot
 
