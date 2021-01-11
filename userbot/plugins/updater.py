@@ -227,7 +227,7 @@ async def upstream(event):
 @bot.on(sudo_cmd(pattern="goodhyp$", allow_sudo=True))
 async def upstream(event):
     event = await edit_or_reply(event, "`Pulling the good hyper repo wait a sec ....`")
-    off_repo = "https://github.com/ahirearyan2/HyperUsetBot-X"
+    off_repo = "https://github.com/ahirearyan2/HyperUserBot-X"
     catcmd = f"rm -rf .git"
     try:
         await runcmd(catcmd)
