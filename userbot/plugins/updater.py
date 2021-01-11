@@ -273,7 +273,7 @@ CMD_HELP.update(
         \n\n📌** CMD ➥** `.update deploy`\
         \n**USAGE   ➥  **Deploy your userbot.So even you restart it doesnt go back to previous version\
         \n\n📌** CMD ➥** `.goodhyp`\
-        \n**USAGE   ➥  **Swich to jisan's unoffical repo to official cat repo.\
+        \n**USAGE   ➥  **Swich to GoodHyp repo from BadHyp repo.\
         \nThis will triggered deploy always, even no updates."
     }
 )
