@@ -42,7 +42,6 @@ for name in files:
         if shortname.replace(".py", "") not in Config.NO_LOAD:
             load_module(shortname.replace(".py", ""))
 
-LOGS.info("
 LOGS.info("Yay Your BadHyperUserBot-X Is Officially Working!!!")
 LOGS.info(
     "Congratulation, Now Type .alive To See Message If Bot Is Live\n"
